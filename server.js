@@ -9,19 +9,13 @@ app.set('view engine', 'ejs');
 
 // Static files
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use('/css', express.static(__dirname + 'public/css'))
-// app.use('/js', express.static(__dirname + 'public/js'))
 
 //File rendering function
 app.get('/', function(req, res){
     res.render('index');
 })
 
-// app.get('/api', function(req, res){
-//     res.json(['A', 'b', 'c']);
-// })
-
-//Port rendering 
+//app listening 
 app.listen(PORT, function(){
     console.log(`Server is running on http://localhost:${PORT}/`)
 })
